@@ -18,6 +18,7 @@ namespace Namu_Darbas
         IList<DrinkModel> GetDrinkByIngredients(string Ingredients);
         IList<DrinkModel> GetDrinkByAlcohol(string Alcohol);
         IList<DrinkModel> GetDrinkDATA(string DATA);
+        IList<DrinkModel> GetRandom();
     }
 
 }

@@ -54,59 +54,59 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataProvider.cs" />
-    <Compile Include="Drinks.cs">
+    <Compile Include="Forms\Drinks.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Drinks.Designer.cs">
+    <Compile Include="Forms\Drinks.Designer.cs">
       <DependentUpon>Drinks.cs</DependentUpon>
     </Compile>
-    <Compile Include="Random.cs">
+    <Compile Include="Forms\Random.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Random.Designer.cs">
+    <Compile Include="Forms\Random.Designer.cs">
       <DependentUpon>Random.cs</DependentUpon>
     </Compile>
     <Compile Include="IDataProvider.cs" />
-    <Compile Include="Alcohol.cs">
+    <Compile Include="Forms\Alcohol.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Alcohol.Designer.cs">
+    <Compile Include="Forms\Alcohol.Designer.cs">
       <DependentUpon>Alcohol.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ingredients.cs">
+    <Compile Include="Forms\Ingredients.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ingredients.Designer.cs">
+    <Compile Include="Forms\Ingredients.Designer.cs">
       <DependentUpon>Ingredients.cs</DependentUpon>
     </Compile>
-    <Compile Include="Glasses.cs">
+    <Compile Include="Forms\Glasses.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Glasses.Designer.cs">
+    <Compile Include="Forms\Glasses.Designer.cs">
       <DependentUpon>Glasses.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainMenu.cs">
+    <Compile Include="Forms\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainMenu.Designer.cs">
+    <Compile Include="Forms\MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Models.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Alcohol.resx">
+    <EmbeddedResource Include="Forms\Alcohol.resx">
       <DependentUpon>Alcohol.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Drinks.resx">
+    <EmbeddedResource Include="Forms\Drinks.resx">
       <DependentUpon>Drinks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Glasses.resx">
+    <EmbeddedResource Include="Forms\Glasses.resx">
       <DependentUpon>Glasses.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ingredients.resx">
+    <EmbeddedResource Include="Forms\Ingredients.resx">
       <DependentUpon>Ingredients.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainMenu.resx">
+    <EmbeddedResource Include="Forms\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -118,7 +118,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Random.resx">
+    <EmbeddedResource Include="Forms\Random.resx">
       <DependentUpon>Random.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
