@@ -60,6 +60,12 @@
     <Compile Include="Drinks.Designer.cs">
       <DependentUpon>Drinks.cs</DependentUpon>
     </Compile>
+    <Compile Include="Random.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Random.Designer.cs">
+      <DependentUpon>Random.cs</DependentUpon>
+    </Compile>
     <Compile Include="IDataProvider.cs" />
     <Compile Include="Alcohol.cs">
       <SubType>Form</SubType>
@@ -112,6 +118,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Random.resx">
+      <DependentUpon>Random.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

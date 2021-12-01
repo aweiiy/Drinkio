@@ -136,6 +136,19 @@ namespace Namu_Darbas
 
         }
 
+        public IList<DrinkModel> GetRandom()
+        {
+            using (HttpClient ApiClient = new HttpClient())
+            {
+                ApiClient.BaseAddress = new Uri(API_URL);
+
+                string str = ApiClient.GetStringAsync("random.php").Result;
+                JObject o = JObject.Parse(str);
+                List<DrinkModel> list = JsonConvert.DeserializeObject<List<DrinkModel>>(o["drinks"].ToString());
+                return list;
+            }
+
+        }
 
 
 

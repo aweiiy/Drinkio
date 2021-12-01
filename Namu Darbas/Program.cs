@@ -18,9 +18,8 @@ namespace Namu_Darbas
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new MainMenu());
 
-            //Show first form and start the message loop
             (new MainMenu()).Show();
-            Application.Run(); // needed, otherwise app closes immediately
+            Application.Run();
 
             
         }

@@ -15,6 +15,13 @@ namespace Namu_Darbas
         public Ingredients()
         {
             InitializeComponent();
+            this.FormClosed +=
+               new System.Windows.Forms.FormClosedEventHandler(this.Ingredients_FormClosed);
+        }
+
+        private void Ingredients_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
 
         private void Ingredients_Load(object sender, EventArgs e)
@@ -53,17 +60,17 @@ namespace Namu_Darbas
                 else MessageBox.Show("No drinks with specified category found!");
 
             }
-            else MessageBox.Show("Please, select category from the list");
+            else MessageBox.Show("Nothing selected!");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            (new MainMenu()).Show(); this.Close();
+            (new MainMenu()).Show(); this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (ingredientsList.SelectedItems.Count > 0)
+            if (ingredientsList.SelectedItems.Count > 0 && drinksList.SelectedItems[0].Text != null)
             {
                 var SelectedItem = drinksList.SelectedItems[0].Text;
                 var provider = new DataProvider();
@@ -84,14 +91,15 @@ namespace Namu_Darbas
                         //------
                         drinkPhoto.SizeMode = PictureBoxSizeMode.StretchImage;
                         drinkPhoto.ImageLocation = i.strDrinkThumb;
-                        //strDrinkThumb
+                        //------
+                        drinkName.Text = i.strDrink;
                     }
 
                 }
                 else MessageBox.Show("No drinks with specified category found!");
 
             }
-            else MessageBox.Show("Please, select category from the list");
+            else MessageBox.Show("Select the ingredient first");
         }
     }
 }

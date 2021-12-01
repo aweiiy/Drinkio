@@ -22,17 +22,17 @@ namespace Namu_Darbas
         private void MainMenu_FormClosed(object sender, FormClosedEventArgs e)
         {
             //(new Form1()).Show();
-            //Application.Exit();
+            Application.Exit();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            (new Drinks()).Show(); this.Close();
+            (new Drinks()).Show(); this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            (new Alcohol()).Show(); this.Close();
+            (new Alcohol()).Show(); this.Hide();
         }
 
         private void MainMenu_Load(object sender, EventArgs e)
@@ -42,17 +42,22 @@ namespace Namu_Darbas
 
         private void button2_Click(object sender, EventArgs e)
         {
-            (new Glasses()).Show(); this.Close();
+            (new Glasses()).Show(); this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            (new Ingredients()).Show(); this.Close();
+            (new Ingredients()).Show(); this.Hide();
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            (new Random()).Show(); this.Hide();
         }
     }
 }

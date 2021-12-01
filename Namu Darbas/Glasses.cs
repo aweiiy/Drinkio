@@ -15,7 +15,15 @@ namespace Namu_Darbas
         public Glasses()
         {
             InitializeComponent();
+            this.FormClosed +=
+            new System.Windows.Forms.FormClosedEventHandler(this.Glasses_FormClosed);
         }
+
+        private void Glasses_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+    
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -37,12 +45,12 @@ namespace Namu_Darbas
                 else MessageBox.Show("No drinks with specified category found!");
 
             }
-            else MessageBox.Show("Please, select category from the list");
+            else MessageBox.Show("Nothing selected!");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            (new MainMenu()).Show(); this.Close();
+            (new MainMenu()).Show(); this.Hide();
         }
 
         private void Glasses_Load(object sender, EventArgs e)
@@ -68,7 +76,7 @@ namespace Namu_Darbas
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (glassList.SelectedItems.Count > 0)
+            if (glassList.SelectedItems.Count > 0 && drinksList.SelectedItems[0].Text != null)
             {
                 var SelectedItem = drinksList.SelectedItems[0].Text;
                 var provider = new DataProvider();
@@ -89,14 +97,15 @@ namespace Namu_Darbas
                         //------
                         drinkPhoto.SizeMode = PictureBoxSizeMode.StretchImage;
                         drinkPhoto.ImageLocation = i.strDrinkThumb;
-                        //strDrinkThumb
+                        //------
+                        drinkName.Text = i.strDrink;
                     }
 
                 }
                 else MessageBox.Show("No drinks with specified category found!");
 
             }
-            else MessageBox.Show("Please, select category from the list");
+            else MessageBox.Show("Select the glass first");
         }
 
         private void drinkPhoto_Click(object sender, EventArgs e)

@@ -35,11 +35,14 @@ namespace Namu_Darbas
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(104, 238);
+            this.button1.Location = new System.Drawing.Point(104, 190);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(123, 23);
             this.button1.TabIndex = 0;
@@ -49,7 +52,7 @@ namespace Namu_Darbas
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(254, 238);
+            this.button2.Location = new System.Drawing.Point(254, 190);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(123, 23);
             this.button2.TabIndex = 1;
@@ -59,7 +62,7 @@ namespace Namu_Darbas
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(411, 238);
+            this.button3.Location = new System.Drawing.Point(411, 190);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(123, 23);
             this.button3.TabIndex = 2;
@@ -69,7 +72,7 @@ namespace Namu_Darbas
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(568, 238);
+            this.button4.Location = new System.Drawing.Point(568, 190);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(123, 23);
             this.button4.TabIndex = 3;
@@ -79,12 +82,13 @@ namespace Namu_Darbas
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(357, 282);
+            this.button5.Location = new System.Drawing.Point(357, 320);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 4;
             this.button5.Text = "RANDOM";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label1
             // 
@@ -97,11 +101,42 @@ namespace Namu_Darbas
             this.label1.Text = "DRINKIO";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(354, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Drink database";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(292, 102);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(200, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Click the buttons bellow to choose drinks";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(301, 293);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(191, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Don\'t know what to make? Click below";
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -125,6 +160,9 @@ namespace Namu_Darbas
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 

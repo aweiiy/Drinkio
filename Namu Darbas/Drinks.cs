@@ -21,7 +21,7 @@ namespace Namu_Darbas
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
-           // Application.Exit();
+           Application.Exit();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -44,7 +44,7 @@ namespace Namu_Darbas
                 else MessageBox.Show("No drinks with specified category found!");
 
             }
-            else MessageBox.Show("Please, select category from the list");
+            else MessageBox.Show("Nothing selected!");
 
         }
 
@@ -71,12 +71,12 @@ namespace Namu_Darbas
 
         private void button2_Click(object sender, EventArgs e)
         {
-            (new MainMenu()).Show(); this.Close();
+            (new MainMenu()).Show(); this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (categoriesList.SelectedItems.Count > 0)
+            if (categoriesList.SelectedItems.Count > 0 && drinksList.SelectedItems[0].Text != null)
             {
                 var SelectedItem = drinksList.SelectedItems[0].Text;
                 var provider = new DataProvider();
@@ -97,26 +97,25 @@ namespace Namu_Darbas
                         //------
                         drinkPhoto.SizeMode = PictureBoxSizeMode.StretchImage;
                         drinkPhoto.ImageLocation = i.strDrinkThumb;
-
+                        //------
+                        drinkName.Text = i.strDrink;
                     }
                     
                 }
                 else MessageBox.Show("No drinks with specified category found!");
 
             }
-            else MessageBox.Show("Please, select category from the list");
+            else MessageBox.Show("Select the category first");
         }
 
         private void Drinks_FormClosing(object sender, FormClosingEventArgs e)
         {
-            switch (MessageBox.Show("Ar norite išeiti?", "DrinkData", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
-            {
-                case DialogResult.Yes:
-                    Application.Exit();
-                    break;
-                case DialogResult.No:
-                    break;
-            }
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
