@@ -36,29 +36,19 @@ namespace Namu_Darbas
             this.drinksList = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button3 = new System.Windows.Forms.Button();
-            this.drinkDATA = new System.Windows.Forms.ListView();
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.drinkPhoto = new System.Windows.Forms.PictureBox();
-            this.ingred = new System.Windows.Forms.ListView();
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.drinkName = new System.Windows.Forms.Label();
+            this.IngredList = new System.Windows.Forms.TextBox();
+            this.drinkDATA = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.drinkPhoto)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 221);
+            this.button1.Location = new System.Drawing.Point(18, 340);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(112, 35);
             this.button1.TabIndex = 1;
             this.button1.Text = "Select";
             this.button1.UseVisualStyleBackColor = true;
@@ -69,9 +59,10 @@ namespace Namu_Darbas
             this.categoriesList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Drink});
             this.categoriesList.HideSelection = false;
-            this.categoriesList.Location = new System.Drawing.Point(12, 12);
+            this.categoriesList.Location = new System.Drawing.Point(18, 18);
+            this.categoriesList.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.categoriesList.Name = "categoriesList";
-            this.categoriesList.Size = new System.Drawing.Size(183, 203);
+            this.categoriesList.Size = new System.Drawing.Size(272, 310);
             this.categoriesList.TabIndex = 2;
             this.categoriesList.UseCompatibleStateImageBehavior = false;
             this.categoriesList.View = System.Windows.Forms.View.Details;
@@ -84,9 +75,10 @@ namespace Namu_Darbas
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 455);
+            this.button2.Location = new System.Drawing.Point(18, 658);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(112, 35);
             this.button2.TabIndex = 3;
             this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = true;
@@ -97,9 +89,10 @@ namespace Namu_Darbas
             this.drinksList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1});
             this.drinksList.HideSelection = false;
-            this.drinksList.Location = new System.Drawing.Point(226, 12);
+            this.drinksList.Location = new System.Drawing.Point(339, 18);
+            this.drinksList.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.drinksList.Name = "drinksList";
-            this.drinksList.Size = new System.Drawing.Size(183, 203);
+            this.drinksList.Size = new System.Drawing.Size(272, 310);
             this.drinksList.TabIndex = 4;
             this.drinksList.UseCompatibleStateImageBehavior = false;
             this.drinksList.View = System.Windows.Forms.View.Details;
@@ -111,127 +104,66 @@ namespace Namu_Darbas
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(226, 220);
+            this.button3.Location = new System.Drawing.Point(339, 338);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(112, 35);
             this.button3.TabIndex = 5;
             this.button3.Text = "Select Drink";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // drinkDATA
-            // 
-            this.drinkDATA.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader2});
-            this.drinkDATA.HideSelection = false;
-            this.drinkDATA.Location = new System.Drawing.Point(12, 327);
-            this.drinkDATA.Name = "drinkDATA";
-            this.drinkDATA.Size = new System.Drawing.Size(397, 114);
-            this.drinkDATA.TabIndex = 6;
-            this.drinkDATA.TileSize = new System.Drawing.Size(700, 20);
-            this.drinkDATA.UseCompatibleStateImageBehavior = false;
-            this.drinkDATA.View = System.Windows.Forms.View.Tile;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Width = 334;
-            // 
             // drinkPhoto
             // 
-            this.drinkPhoto.Location = new System.Drawing.Point(445, 135);
+            this.drinkPhoto.Location = new System.Drawing.Point(668, 208);
+            this.drinkPhoto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.drinkPhoto.Name = "drinkPhoto";
-            this.drinkPhoto.Size = new System.Drawing.Size(360, 306);
+            this.drinkPhoto.Size = new System.Drawing.Size(540, 442);
             this.drinkPhoto.TabIndex = 7;
             this.drinkPhoto.TabStop = false;
-            // 
-            // ingred
-            // 
-            this.ingred.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader3,
-            this.columnHeader16,
-            this.columnHeader17,
-            this.columnHeader18,
-            this.columnHeader19,
-            this.columnHeader20,
-            this.columnHeader21,
-            this.columnHeader22,
-            this.columnHeader23,
-            this.columnHeader24});
-            this.ingred.HideSelection = false;
-            this.ingred.Location = new System.Drawing.Point(445, 12);
-            this.ingred.Name = "ingred";
-            this.ingred.Size = new System.Drawing.Size(360, 102);
-            this.ingred.TabIndex = 15;
-            this.ingred.UseCompatibleStateImageBehavior = false;
-            this.ingred.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "";
-            this.columnHeader3.Width = 78;
-            // 
-            // columnHeader16
-            // 
-            this.columnHeader16.Text = "";
-            this.columnHeader16.Width = 83;
-            // 
-            // columnHeader17
-            // 
-            this.columnHeader17.Text = "";
-            this.columnHeader17.Width = 78;
-            // 
-            // columnHeader18
-            // 
-            this.columnHeader18.Text = "";
-            this.columnHeader18.Width = 85;
-            // 
-            // columnHeader19
-            // 
-            this.columnHeader19.Text = "";
-            // 
-            // columnHeader20
-            // 
-            this.columnHeader20.Text = "";
-            // 
-            // columnHeader21
-            // 
-            this.columnHeader21.Text = "";
-            // 
-            // columnHeader22
-            // 
-            this.columnHeader22.Text = "";
-            // 
-            // columnHeader23
-            // 
-            this.columnHeader23.Text = "";
-            // 
-            // columnHeader24
-            // 
-            this.columnHeader24.Text = "";
             // 
             // drinkName
             // 
             this.drinkName.AutoSize = true;
             this.drinkName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drinkName.Location = new System.Drawing.Point(181, 304);
+            this.drinkName.Location = new System.Drawing.Point(260, 407);
+            this.drinkName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.drinkName.Name = "drinkName";
-            this.drinkName.Size = new System.Drawing.Size(0, 20);
+            this.drinkName.Size = new System.Drawing.Size(0, 29);
             this.drinkName.TabIndex = 16;
+            // 
+            // IngredList
+            // 
+            this.IngredList.Location = new System.Drawing.Point(668, 18);
+            this.IngredList.Multiline = true;
+            this.IngredList.Name = "IngredList";
+            this.IngredList.Size = new System.Drawing.Size(540, 155);
+            this.IngredList.TabIndex = 31;
+            this.IngredList.Text = "Ingredients:\r\n";
+            // 
+            // drinkDATA
+            // 
+            this.drinkDATA.Location = new System.Drawing.Point(18, 439);
+            this.drinkDATA.Multiline = true;
+            this.drinkDATA.Name = "drinkDATA";
+            this.drinkDATA.Size = new System.Drawing.Size(593, 211);
+            this.drinkDATA.TabIndex = 30;
             // 
             // Drinks
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(840, 490);
-            this.Controls.Add(this.drinkName);
-            this.Controls.Add(this.ingred);
-            this.Controls.Add(this.drinkPhoto);
+            this.ClientSize = new System.Drawing.Size(1260, 705);
+            this.Controls.Add(this.IngredList);
             this.Controls.Add(this.drinkDATA);
+            this.Controls.Add(this.drinkName);
+            this.Controls.Add(this.drinkPhoto);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.drinksList);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.categoriesList);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Drinks";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Categories list";
@@ -251,20 +183,9 @@ namespace Namu_Darbas
         private System.Windows.Forms.ListView drinksList;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ListView drinkDATA;
         private System.Windows.Forms.PictureBox drinkPhoto;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ListView ingred;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader16;
-        private System.Windows.Forms.ColumnHeader columnHeader17;
-        private System.Windows.Forms.ColumnHeader columnHeader18;
-        private System.Windows.Forms.ColumnHeader columnHeader19;
-        private System.Windows.Forms.ColumnHeader columnHeader20;
-        private System.Windows.Forms.ColumnHeader columnHeader21;
-        private System.Windows.Forms.ColumnHeader columnHeader22;
-        private System.Windows.Forms.ColumnHeader columnHeader23;
-        private System.Windows.Forms.ColumnHeader columnHeader24;
         private System.Windows.Forms.Label drinkName;
+        private System.Windows.Forms.TextBox IngredList;
+        private System.Windows.Forms.TextBox drinkDATA;
     }
 }
