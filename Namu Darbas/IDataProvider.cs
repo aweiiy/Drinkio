@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Namu_Darbas
 {
-    interface IDataProvider
+    public interface IDataProvider
     {
         IList<CategoriesModel> GetCategories();
         IList<GlassModel> GetGlasses();

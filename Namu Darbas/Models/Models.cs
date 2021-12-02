@@ -42,6 +42,7 @@ namespace Namu_Darbas.Models
         public string strIngredient13;
         public string strIngredient14;
         public string strIngredient15;
+        public string strAlcoholic;
 
     }
 }
