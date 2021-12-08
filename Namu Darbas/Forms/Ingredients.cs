@@ -46,6 +46,7 @@ namespace Namu_Darbas
             {
                 var SelectedItem = ingredientsList.SelectedItems[0].Text;
                 var provider = new DataProvider();
+                var repository = new Repository(provider);
 
                 var results = provider.GetDrinkByIngredients(SelectedItem.ToString());
                 drinksList.Items.Clear();
@@ -58,7 +59,7 @@ namespace Namu_Darbas
                     }
                 }
                 else MessageBox.Show("No drinks with specified category found!");
-
+                ingredientCount.Text = "There are " + repository.CountDrinksByIngredient(SelectedItem) + " drinks with " + SelectedItem;
             }
             else MessageBox.Show("Nothing selected!");
         }

@@ -9,14 +9,14 @@ namespace Namu_Darbas
     public class Repository
     {
         private readonly IDataProvider m_provider;
-        public Repository(IDataProvider privider)
+        public Repository(IDataProvider provider)
         {
-            m_provider = privider;
+            m_provider = provider;
         }
 
-        public int CountDrinksByMainIngredient(string ingredient)
+        public int CountDrinksByIngredient(string ingredient)
         {
-            return m_provider.GetDrinkByIngredients(ingredient).Where(o => o.strIngredient1.StartsWith(ingredient)).Count();
+            return m_provider.GetDrinkByIngredients(ingredient).Count();
         }
 
         public int CountDrinksByAlcoholType(string Category, string alcoholType)
@@ -24,5 +24,9 @@ namespace Namu_Darbas
             return m_provider.GetDrinkByCategory(Category).Where(o => o.strAlcoholic.StartsWith(alcoholType)).Count();
         }
 
+        public int CountDrinksByAlcoholType(string alcoholType)
+        {
+            return m_provider.GetDrinkByAlcohol(alcoholType).Count();
+        }
     }
 }

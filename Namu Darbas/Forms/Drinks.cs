@@ -42,7 +42,7 @@ namespace Namu_Darbas
                     }
                 }
                 else MessageBox.Show("No drinks with specified category found!");
-
+              
             }
             else MessageBox.Show("Nothing selected!");
 

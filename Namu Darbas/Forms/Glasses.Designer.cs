@@ -48,10 +48,9 @@ namespace Namu_Darbas
             this.glassList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Glass});
             this.glassList.HideSelection = false;
-            this.glassList.Location = new System.Drawing.Point(18, 18);
-            this.glassList.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.glassList.Location = new System.Drawing.Point(12, 12);
             this.glassList.Name = "glassList";
-            this.glassList.Size = new System.Drawing.Size(238, 318);
+            this.glassList.Size = new System.Drawing.Size(160, 208);
             this.glassList.TabIndex = 0;
             this.glassList.UseCompatibleStateImageBehavior = false;
             this.glassList.View = System.Windows.Forms.View.Details;
@@ -64,10 +63,9 @@ namespace Namu_Darbas
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(18, 348);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Location = new System.Drawing.Point(12, 226);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 35);
+            this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
             this.button1.Text = "Select";
             this.button1.UseVisualStyleBackColor = true;
@@ -75,10 +73,9 @@ namespace Namu_Darbas
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(18, 638);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button2.Location = new System.Drawing.Point(12, 415);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 35);
+            this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 2;
             this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = true;
@@ -86,10 +83,9 @@ namespace Namu_Darbas
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(284, 348);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button3.Location = new System.Drawing.Point(189, 226);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(112, 35);
+            this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 4;
             this.button3.Text = "Select drink";
             this.button3.UseVisualStyleBackColor = true;
@@ -97,10 +93,9 @@ namespace Namu_Darbas
             // 
             // drinkPhoto
             // 
-            this.drinkPhoto.Location = new System.Drawing.Point(606, 203);
-            this.drinkPhoto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.drinkPhoto.Location = new System.Drawing.Point(404, 132);
             this.drinkPhoto.Name = "drinkPhoto";
-            this.drinkPhoto.Size = new System.Drawing.Size(540, 471);
+            this.drinkPhoto.Size = new System.Drawing.Size(360, 306);
             this.drinkPhoto.TabIndex = 8;
             this.drinkPhoto.TabStop = false;
             this.drinkPhoto.Click += new System.EventHandler(this.drinkPhoto_Click);
@@ -110,10 +105,9 @@ namespace Namu_Darbas
             this.drinksList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1});
             this.drinksList.HideSelection = false;
-            this.drinksList.Location = new System.Drawing.Point(284, 18);
-            this.drinksList.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.drinksList.Location = new System.Drawing.Point(189, 12);
             this.drinksList.Name = "drinksList";
-            this.drinksList.Size = new System.Drawing.Size(272, 318);
+            this.drinksList.Size = new System.Drawing.Size(183, 208);
             this.drinksList.TabIndex = 9;
             this.drinksList.UseCompatibleStateImageBehavior = false;
             this.drinksList.View = System.Windows.Forms.View.Details;
@@ -128,34 +122,35 @@ namespace Namu_Darbas
             // 
             this.drinkName.AutoSize = true;
             this.drinkName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drinkName.Location = new System.Drawing.Point(243, 418);
-            this.drinkName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.drinkName.Location = new System.Drawing.Point(12, 274);
             this.drinkName.Name = "drinkName";
-            this.drinkName.Size = new System.Drawing.Size(0, 29);
+            this.drinkName.Size = new System.Drawing.Size(0, 20);
             this.drinkName.TabIndex = 18;
             // 
             // IngredList
             // 
-            this.IngredList.Location = new System.Drawing.Point(606, 18);
+            this.IngredList.Location = new System.Drawing.Point(404, 12);
+            this.IngredList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.IngredList.Multiline = true;
             this.IngredList.Name = "IngredList";
-            this.IngredList.Size = new System.Drawing.Size(540, 155);
+            this.IngredList.Size = new System.Drawing.Size(361, 102);
             this.IngredList.TabIndex = 29;
             this.IngredList.Text = "Ingredients:\r\n";
             // 
             // drinkDATA
             // 
-            this.drinkDATA.Location = new System.Drawing.Point(14, 455);
+            this.drinkDATA.Location = new System.Drawing.Point(9, 296);
+            this.drinkDATA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.drinkDATA.Multiline = true;
             this.drinkDATA.Name = "drinkDATA";
-            this.drinkDATA.Size = new System.Drawing.Size(564, 155);
+            this.drinkDATA.Size = new System.Drawing.Size(377, 102);
             this.drinkDATA.TabIndex = 28;
             // 
             // Glasses
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.IngredList);
             this.Controls.Add(this.drinkDATA);
             this.Controls.Add(this.drinkName);
@@ -165,7 +160,6 @@ namespace Namu_Darbas
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.glassList);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Glasses";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Glass list";

@@ -88,6 +88,7 @@ namespace Namu_Darbas
             {
                 var SelectedItem = alcoholList.SelectedItems[0].Text;
                 var provider = new DataProvider();
+                var repository = new Repository(provider);
 
                 var results = provider.GetDrinkByAlcohol(SelectedItem.ToString());
                 drinksList.Items.Clear();
@@ -100,7 +101,7 @@ namespace Namu_Darbas
                     }
                 }
                 else MessageBox.Show("No drinks with specified category found!");
-
+                alctypeCount.Text = "There are " + repository.CountDrinksByAlcoholType(SelectedItem) + " drinks that are " + SelectedItem;
             }
             else MessageBox.Show("Nothing selected!");
         }
