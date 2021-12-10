@@ -21,9 +21,9 @@ namespace Namu_Darbas
             {
                 ApiClient.BaseAddress = new Uri(API_URL);
 
-                string str = ApiClient.GetStringAsync("list.php?c=list").Result;
-                JObject o = JObject.Parse(str);
-                List<CategoriesModel> list = JsonConvert.DeserializeObject<List<CategoriesModel>>(o["drinks"].ToString());
+                string result = ApiClient.GetStringAsync("list.php?c=list").Result;
+                JObject jResults = JObject.Parse(result);
+                List<CategoriesModel> list = JsonConvert.DeserializeObject<List<CategoriesModel>>(jResults["drinks"].ToString());
                 return list;
             }
 
@@ -34,9 +34,9 @@ namespace Namu_Darbas
             {
                 ApiClient.BaseAddress = new Uri(API_URL);
 
-                string str = ApiClient.GetStringAsync("list.php?g=list").Result;
-                JObject o = JObject.Parse(str);
-                List<GlassModel> list = JsonConvert.DeserializeObject<List<GlassModel>>(o["drinks"].ToString());
+                string result = ApiClient.GetStringAsync("list.php?g=list").Result;
+                JObject jResults = JObject.Parse(result);
+                List<GlassModel> list = JsonConvert.DeserializeObject<List<GlassModel>>(jResults["drinks"].ToString());
                 return list;
             }
 
@@ -49,9 +49,9 @@ namespace Namu_Darbas
             {
                 ApiClient.BaseAddress = new Uri(API_URL);
 
-                string str = ApiClient.GetStringAsync("list.php?i=list").Result;
-                JObject o = JObject.Parse(str);
-                List<IngredientModel> list = JsonConvert.DeserializeObject<List<IngredientModel>>(o["drinks"].ToString());
+                string result = ApiClient.GetStringAsync("list.php?i=list").Result;
+                JObject jResults = JObject.Parse(result);
+                List<IngredientModel> list = JsonConvert.DeserializeObject<List<IngredientModel>>(jResults["drinks"].ToString());
                 return list;
             }
 
@@ -62,9 +62,9 @@ namespace Namu_Darbas
             {
                 ApiClient.BaseAddress = new Uri(API_URL);
 
-                string str = ApiClient.GetStringAsync("list.php?a=list").Result;
-                JObject o = JObject.Parse(str);
-                List<AlcoholModel> list = JsonConvert.DeserializeObject<List<AlcoholModel>>(o["drinks"].ToString());
+                string result = ApiClient.GetStringAsync("list.php?a=list").Result;
+                JObject jResults = JObject.Parse(result);
+                List<AlcoholModel> list = JsonConvert.DeserializeObject<List<AlcoholModel>>(jResults["drinks"].ToString());
                 return list;
             }
 
@@ -76,9 +76,9 @@ namespace Namu_Darbas
             {
                 ApiClient.BaseAddress = new Uri(API_URL);
 
-                string str = ApiClient.GetStringAsync($"filter.php?c={Category}").Result;
-                JObject o = JObject.Parse(str);
-                List<DrinkModel> list = JsonConvert.DeserializeObject<List<DrinkModel>>(o["drinks"].ToString());
+                string result = ApiClient.GetStringAsync($"filter.php?c={Category}").Result;
+                JObject jResults = JObject.Parse(result);
+                List<DrinkModel> list = JsonConvert.DeserializeObject<List<DrinkModel>>(jResults["drinks"].ToString());
                 return list;
             }
 
@@ -89,9 +89,9 @@ namespace Namu_Darbas
             {
                 ApiClient.BaseAddress = new Uri(API_URL);
 
-                string str = ApiClient.GetStringAsync($"filter.php?g={Glass}").Result;
-                JObject o = JObject.Parse(str);
-                List<DrinkModel> list = JsonConvert.DeserializeObject<List<DrinkModel>>(o["drinks"].ToString());
+                string result = ApiClient.GetStringAsync($"filter.php?g={Glass}").Result;
+                JObject jResults = JObject.Parse(result);
+                List<DrinkModel> list = JsonConvert.DeserializeObject<List<DrinkModel>>(jResults["drinks"].ToString());
                 return list;
             }
 
@@ -102,9 +102,9 @@ namespace Namu_Darbas
             {
                 ApiClient.BaseAddress = new Uri(API_URL);
 
-                string str = ApiClient.GetStringAsync($"filter.php?i={Ingredients}").Result;
-                JObject o = JObject.Parse(str);
-                List<DrinkModel> list = JsonConvert.DeserializeObject<List<DrinkModel>>(o["drinks"].ToString());
+                string result = ApiClient.GetStringAsync($"filter.php?i={Ingredients}").Result;
+                JObject jResults = JObject.Parse(result);
+                List<DrinkModel> list = JsonConvert.DeserializeObject<List<DrinkModel>>(jResults["drinks"].ToString());
                 return list;
             }
 
@@ -115,9 +115,9 @@ namespace Namu_Darbas
             {
                 ApiClient.BaseAddress = new Uri(API_URL);
 
-                string str = ApiClient.GetStringAsync($"filter.php?a={Alcohol}").Result;
-                JObject o = JObject.Parse(str);
-                List<DrinkModel> list = JsonConvert.DeserializeObject<List<DrinkModel>>(o["drinks"].ToString());
+                string result = ApiClient.GetStringAsync($"filter.php?a={Alcohol}").Result;
+                JObject jResults = JObject.Parse(result);
+                List<DrinkModel> list = JsonConvert.DeserializeObject<List<DrinkModel>>(jResults["drinks"].ToString());
                 return list;
             }
 
@@ -128,9 +128,9 @@ namespace Namu_Darbas
             {
                 ApiClient.BaseAddress = new Uri(API_URL);
 
-                string str = ApiClient.GetStringAsync($"search.php?s={DATA}").Result;
-                JObject o = JObject.Parse(str);
-                List<DrinkModel> list = JsonConvert.DeserializeObject<List<DrinkModel>>(o["drinks"].ToString());
+                string result = ApiClient.GetStringAsync($"search.php?s={DATA}").Result;
+                JObject jResults = JObject.Parse(result);
+                List<DrinkModel> list = JsonConvert.DeserializeObject<List<DrinkModel>>(jResults["drinks"].ToString());
                 return list;
             }
 
@@ -142,9 +142,9 @@ namespace Namu_Darbas
             {
                 ApiClient.BaseAddress = new Uri(API_URL);
 
-                string str = ApiClient.GetStringAsync("random.php").Result;
-                JObject o = JObject.Parse(str);
-                List<DrinkModel> list = JsonConvert.DeserializeObject<List<DrinkModel>>(o["drinks"].ToString());
+                string result = ApiClient.GetStringAsync("random.php").Result;
+                JObject jResults = JObject.Parse(result);
+                List<DrinkModel> list = JsonConvert.DeserializeObject<List<DrinkModel>>(jResults["drinks"].ToString());
                 return list;
             }
 

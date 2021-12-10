@@ -27,10 +27,12 @@ namespace Namu_Darbas
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.button3.Enabled = true;
             if (glassList.SelectedItems.Count > 0)
             {
                 var SelectedItem = glassList.SelectedItems[0].Text;
                 var provider = new DataProvider();
+                var repository = new Repository(provider);
 
                 var results = provider.GetDrinkByGlass(SelectedItem.ToString());
                 drinksList.Items.Clear();
@@ -43,7 +45,7 @@ namespace Namu_Darbas
                     }
                 }
                 else MessageBox.Show("No drinks with specified category found!");
-
+                glassCount.Text = "There are " + repository.CountDrinksByGlass(SelectedItem) + " drinks served in " + SelectedItem;
             }
             else MessageBox.Show("Nothing selected!");
         }
@@ -55,6 +57,7 @@ namespace Namu_Darbas
 
         private void Glasses_Load(object sender, EventArgs e)
         {
+            this.button3.Enabled = false;
             var provider = new DataProvider();
             var results = provider.GetGlasses();
 

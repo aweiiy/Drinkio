@@ -27,6 +27,7 @@ namespace Namu_Darbas
 
         private void Alcohol_Load(object sender, EventArgs e)
         {
+            this.button3.Enabled = false;
             var provider = new DataProvider();
             IList<Models.AlcoholModel> results = provider.GetAlcohol();
 
@@ -84,6 +85,7 @@ namespace Namu_Darbas
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.button3.Enabled = true;
             if (alcoholList.SelectedItems.Count > 0)
             {
                 var SelectedItem = alcoholList.SelectedItems[0].Text;

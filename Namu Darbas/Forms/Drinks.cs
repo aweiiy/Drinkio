@@ -26,10 +26,12 @@ namespace Namu_Darbas
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.button3.Enabled = true;
             if (categoriesList.SelectedItems.Count > 0)
             {
                 var SelectedItem = categoriesList.SelectedItems[0].Text;
                 var provider = new DataProvider();
+                var repository = new Repository(provider);
 
                 var results = provider.GetDrinkByCategory(SelectedItem.ToString());
                 drinksList.Items.Clear();
@@ -42,7 +44,7 @@ namespace Namu_Darbas
                     }
                 }
                 else MessageBox.Show("No drinks with specified category found!");
-              
+                categoryCount.Text = "There are " + repository.CountDrinksByCategory(SelectedItem) + " drinks in " + SelectedItem + " category";
             }
             else MessageBox.Show("Nothing selected!");
 
@@ -55,6 +57,7 @@ namespace Namu_Darbas
 
         private void Drinks_Load(object sender, EventArgs e)
         {
+            this.button3.Enabled = false;
             var provider = new DataProvider();
             var results = provider.GetCategories();
             
@@ -78,6 +81,7 @@ namespace Namu_Darbas
         {
             if (categoriesList.SelectedItems.Count > 0 && drinksList.SelectedItems[0].Text != null)
             {
+                
                 var SelectedItem = drinksList.SelectedItems[0].Text;
                 var provider = new DataProvider();
 
@@ -105,7 +109,7 @@ namespace Namu_Darbas
                     
                 }
                 else MessageBox.Show("No drinks with specified category found!");
-
+                
             }
             else MessageBox.Show("Select the category first");
         }

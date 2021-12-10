@@ -19,6 +19,25 @@ namespace Namu_Darbas
             return m_provider.GetDrinkByIngredients(ingredient).Count();
         }
 
+        public int CountDrinksByCategory(string category)
+        {
+            return m_provider.GetDrinkByCategory(category).Count();
+        }
+        public int CountDrinksCategories(string category)
+        {
+            return m_provider.GetCategories().Where(o => o.strCategory.Equals(category)).Count();
+        }
+
+        public int CountDrinksByGlass(string glass)
+        {
+            return m_provider.GetDrinkByGlass(glass).Count();
+        }
+
+        public int CountDrinksGlasses(string glass)
+        {
+            return m_provider.GetGlasses().Where(o => o.strGlass.Equals(glass)).Count();
+        }
+
         public int CountDrinksByAlcoholType(string Category, string alcoholType)
         {
             return m_provider.GetDrinkByCategory(Category).Where(o => o.strAlcoholic.StartsWith(alcoholType)).Count();

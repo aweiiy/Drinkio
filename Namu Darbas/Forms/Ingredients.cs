@@ -26,6 +26,7 @@ namespace Namu_Darbas
 
         private void Ingredients_Load(object sender, EventArgs e)
         {
+            this.button3.Enabled = false;
             var provider = new DataProvider();
             var results = provider.GetIngredients();
 
@@ -42,6 +43,7 @@ namespace Namu_Darbas
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.button3.Enabled = true;
             if (ingredientsList.SelectedItems.Count > 0)
             {
                 var SelectedItem = ingredientsList.SelectedItems[0].Text;

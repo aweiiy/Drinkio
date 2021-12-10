@@ -40,6 +40,7 @@ namespace Namu_Darbas
             this.drinkName = new System.Windows.Forms.Label();
             this.IngredList = new System.Windows.Forms.TextBox();
             this.drinkDATA = new System.Windows.Forms.TextBox();
+            this.categoryCount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.drinkPhoto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -128,7 +129,7 @@ namespace Namu_Darbas
             // IngredList
             // 
             this.IngredList.Location = new System.Drawing.Point(445, 12);
-            this.IngredList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.IngredList.Margin = new System.Windows.Forms.Padding(2);
             this.IngredList.Multiline = true;
             this.IngredList.Name = "IngredList";
             this.IngredList.Size = new System.Drawing.Size(361, 102);
@@ -138,17 +139,26 @@ namespace Namu_Darbas
             // drinkDATA
             // 
             this.drinkDATA.Location = new System.Drawing.Point(12, 285);
-            this.drinkDATA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.drinkDATA.Margin = new System.Windows.Forms.Padding(2);
             this.drinkDATA.Multiline = true;
             this.drinkDATA.Name = "drinkDATA";
             this.drinkDATA.Size = new System.Drawing.Size(397, 139);
             this.drinkDATA.TabIndex = 30;
+            // 
+            // categoryCount
+            // 
+            this.categoryCount.AutoSize = true;
+            this.categoryCount.Location = new System.Drawing.Point(223, 246);
+            this.categoryCount.Name = "categoryCount";
+            this.categoryCount.Size = new System.Drawing.Size(0, 13);
+            this.categoryCount.TabIndex = 35;
             // 
             // Drinks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(840, 458);
+            this.Controls.Add(this.categoryCount);
             this.Controls.Add(this.IngredList);
             this.Controls.Add(this.drinkDATA);
             this.Controls.Add(this.drinkName);
@@ -181,5 +191,6 @@ namespace Namu_Darbas
         private System.Windows.Forms.Label drinkName;
         private System.Windows.Forms.TextBox IngredList;
         private System.Windows.Forms.TextBox drinkDATA;
+        private System.Windows.Forms.Label categoryCount;
     }
 }
