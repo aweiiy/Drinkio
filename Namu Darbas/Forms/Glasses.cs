@@ -94,6 +94,7 @@ namespace Namu_Darbas
                         drinkDATA.Text = i.strInstructions;
                         //------
                         string[] ingredients = { i.strIngredient1, i.strIngredient2, i.strIngredient3, i.strIngredient4, i.strIngredient5, i.strIngredient6, i.strIngredient7, i.strIngredient8, i.strIngredient9, i.strIngredient10, i.strIngredient11, i.strIngredient12, i.strIngredient13, i.strIngredient14, i.strIngredient15 };
+                        IngredList.Text = "Ingredients:" + Environment.NewLine;
                         var j = 0;
                         while (ingredients[j] != null)
                         {
